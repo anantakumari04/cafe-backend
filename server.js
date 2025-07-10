@@ -2,8 +2,11 @@ import express from "express";
 import mongoose from "mongoose";
 import userRouter from "./routes/userRoute.js";
 import dotenv from 'dotenv'
+import cors from "cors" //to connect frontend and backend
 const app = express();
 app.use(express.json());
+
+app.use(cors()); //frontend ka api
 
 dotenv.config()
 
