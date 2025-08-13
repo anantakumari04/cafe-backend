@@ -1,145 +1,122 @@
-☕ MERN Café Store
-A full-stack café e-commerce platform built using the MERN stack (MongoDB, Express.js, React.js, Node.js).
-The platform supports user authentication, product browsing, cart management, and order processing, with a dedicated admin panel for managing users, products, and orders.
+# MERN Café Store
 
-📌 Features
-👤 User Features
-Create Account / Login
+![MERN Café Store](./public/home.png)
 
-View Products
+## Description
 
-Add Products to Cart
+MERN Café Store is a full-stack e-commerce web application designed specifically for a café business. It allows customers to browse products, add items to their cart, and place orders after logging in. The application features role-based authentication with two main user types: Customers and Admins.
 
-Place Orders (login required)
+Admins have a dedicated dashboard to manage users, products, and orders, including adding or deleting users/products and updating order statuses (complete/reject). This system ensures smooth operations for café management and a seamless shopping experience for customers.
 
-View Order History
+---
 
-🛠 Admin Features
-Login as Admin (separate navigation section appears)
+## Features
 
-Manage Users – Add, Delete
+### User Features
+- User registration and login authentication.
+- Browse café products with detailed information.
+- Add products to the shopping cart.
+- Place orders (login required).
+- View order history and status updates.
 
-Manage Products – Add, Delete
+### Admin Features
+- Secure admin login.
+- Dashboard with an admin navigation bar.
+- Manage users: Add, delete users.
+- Manage products: Add, delete products.
+- Manage orders: View all orders and update order status (Complete / Reject).
+- Admin can monitor all user activities and order progress.
 
-Manage Orders – Mark as Completed or Rejected
+---
 
-🏗| Category        | Technology                                   |
-|-----------------|------------------------------------------------|
-| Frontend        | React.js, React Router, Redux / Context API, CSS / Tailwind |
-| Backend         | Node.js, Express.js                            |
-| Database        | MongoDB (Mongoose)                             |
-| Authentication  | JWT (JSON Web Token), bcrypt.js                |
+## Technology Stack
 
+| Frontend       | Backend         | Database         | Authentication       |
+|----------------|-----------------|------------------|----------------------|
+| React.js       | Node.js + Express.js | MongoDB          | JWT (JSON Web Token) |
 
-API Testing	Postman
-Deployment	Vercel / Render / Heroku (Frontend), MongoDB Atlas (Database)
+---
 
-📂 Folder Structure
-csharp
-Copy
-Edit
-MERN-Cafe-Store/
+## Project Structure
+
+mern-cafe-store/
 │
-├── backend/
-│   ├── config/        # DB connection, JWT config
-│   ├── controllers/   # API logic (users, products, orders)
-│   ├── models/        # Mongoose schemas
-│   ├── routes/        # API routes
-│   ├── middleware/    # Auth middleware
-│   └── server.js      # Entry point
-│
-├── frontend/
-│   ├── public/        # Static files
-│   ├── src/
-│   │   ├── components/ # Reusable UI components
-│   │   ├── pages/      # Screens (Home, Cart, Admin, etc.)
-│   │   ├── redux/      # State management
-│   │   ├── App.js
-│   │   └── index.js
-│
+├── backend/ # Express server, routes, controllers
+├── frontend/ # React app
+├── public/ # Static assets like images (home.png)
 ├── README.md
 └── package.json
 
-⚙️ Installation & Setup
-1️⃣ Clone the repository
-bash
-Copy
-Edit
-git clone https://github.com/your-username/MERN-Cafe-Store.git
-cd MERN-Cafe-Store
 
-2️⃣ Install dependencies
-bash
-Copy
-Edit
-# Install backend dependencies
+
+---
+
+## Installation & Setup Instructions
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/mern-cafe-store.git
+   cd mern-cafe-store
+   Setup Backend
+
+2. Setup Backend
 cd backend
 npm install
+# create a .env file with your MongoDB URI and JWT_SECRET
+npm start
 
-# Install frontend dependencies
-cd ../frontend
+3. Setup Frontend
+   cd ../frontend
 npm install
-3️⃣ Environment Variables
-Create a .env file in backend/ with:
+npm start
 
-ini
-Copy
-Edit
-PORT=5000
+Environment Variables
+Create a .env file in the backend folder with:
+
+
 MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_secret_key
-4️⃣ Run the project
-bash
-Copy
-Edit
-# Run backend
-cd backend
-npm start
-
-# Run frontend
-cd ../frontend
-npm start
-🔗 API Endpoints Overview
-User
-Method	Endpoint	Description
-POST	/api/users/register	Register new user
-POST	/api/users/login	Login user
-GET	/api/users/profile	Get user profile
-
-Products
-Method	Endpoint	Description
-GET	/api/products	Get all products
-POST	/api/products	Add product (Admin)
-DELETE	/api/products/:id	Delete product (Admin)
-
-Orders
-Method	Endpoint	Description
-POST	/api/orders	Create new order
-GET	/api/orders	Get all orders (Admin)
-PUT	/api/orders/:id	Update status (Admin)
-
-🖼 System Architecture
-mermaid
-Copy
-Edit
-flowchart LR
+JWT_SECRET=your_jwt_secret_key
+PORT=5000
 
 
-    A[User Browser] -->|HTTP Requests| B[React Frontend]
-    B -->|API Calls| C[Express.js Backend]
-    C -->|Queries| D[MongoDB Database]
-    C -->|Auth| E[JWT Authentication]
-    F[Admin Panel] -->|Manage Data| C
-    
-📸 Screenshots
-![Home Page Screenshot](public/home.png)
+Usage
+Users can browse products without login.
+
+To place an order, users must register or login.
+
+Admins login via the Admin section in the navbar.
+
+Admin panel allows user and product management and order status updates.
+
+Order statuses can be updated to "Complete" or "Rejected" by the admin.
+
+API Endpoints (Summary)
+Route	Method	Description
+/api/users/register	POST	Register a new user
+/api/users/login	POST	Login user and return JWT token
+/api/products	GET	Get all products
+/api/products	POST	Admin: Add new product
+/api/products/:id	DELETE	Admin: Delete a product
+/api/orders	POST	Place new order
+/api/orders	GET	Admin: Get all orders
+/api/orders/:id	PUT	Admin: Update order status
+/api/users	GET	Admin: Get all users
+/api/users/:id	DELETE	Admin: Delete user
+
+System Diagram
++----------------+       +----------------+       +------------------+
+|                |       |                |       |                  |
+|   React Front  | <---> |  Express API   | <---> |    MongoDB       |
+|   (Frontend)   |       |  (Backend)     |       |   (Database)     |
+|                |       |                |       |                  |
++----------------+       +----------------+       +------------------+
+
+User Flow:
+- User registers/logs in --> Token stored locally --> Authenticated requests to API
+- Admin logs in --> Access admin dashboard --> Manage users/products/orders
 
 
 
-🚀 Deployment
-Frontend: https://cafe-frontend-sooty.vercel.app/
-
-
-
-Database: MongoDB Atlas
+Contribution
+Feel free to fork this project and submit pull requests. For major changes, please open an issue first to discuss what you would like to change.
 
