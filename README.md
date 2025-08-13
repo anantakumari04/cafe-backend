@@ -104,12 +104,20 @@ Route	Method	Description
 /api/users/:id	DELETE	Admin: Delete user
 
 System Diagram
+
+
+
 +----------------+       +----------------+       +------------------+
 |                |       |                |       |                  |
 |   React Front  | <---> |  Express API   | <---> |    MongoDB       |
 |   (Frontend)   |       |  (Backend)     |       |   (Database)     |
 |                |       |                |       |                  |
 +----------------+       +----------------+       +------------------+
+
+User Flow:
+- User registers/logs in --> Token stored locally --> Authenticated requests to API
+- Admin logs in --> Access admin dashboard --> Manage users/products/orders
+
 
 User Flow:
 - User registers/logs in --> Token stored locally --> Authenticated requests to API
