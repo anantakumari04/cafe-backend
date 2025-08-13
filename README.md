@@ -125,7 +125,8 @@ flowchart LR
     C -->|Auth| E[JWT Authentication]
     F[Admin Panel] -->|Manage Data| C
 📸 Screenshots
-![Home Page](relative/path/to/home.png)
+![Home Page Screenshot](public/home.png)
+
 
 
 🚀 Deployment
