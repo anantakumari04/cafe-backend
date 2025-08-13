@@ -137,9 +137,9 @@ flowchart LR
 
 
 🚀 Deployment
-Frontend: Your Deployed Link
+Frontend: https://cafe-frontend-sooty.vercel.app/
 
-Backend API: Your API Endpoint
+
 
 Database: MongoDB Atlas
 
