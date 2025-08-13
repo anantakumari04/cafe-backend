@@ -23,12 +23,13 @@ Manage Products – Add, Delete
 
 Manage Orders – Mark as Completed or Rejected
 
-🏗 Tech                  Stack
-Category	             Technology
-Frontend	             React.js, React Router, Redux / Context API, CSS / Tailwind
-Backend                  Node.js, Express.js
-Database	             MongoDB (Mongoose)
-Authentication	         JWT (JSON Web Token), bcrypt.js
+🏗| Category        | Technology                                   |
+|-----------------|------------------------------------------------|
+| Frontend        | React.js, React Router, Redux / Context API, CSS / Tailwind |
+| Backend         | Node.js, Express.js                            |
+| Database        | MongoDB (Mongoose)                             |
+| Authentication  | JWT (JSON Web Token), bcrypt.js                |
+
 
 API Testing	Postman
 Deployment	Vercel / Render / Heroku (Frontend), MongoDB Atlas (Database)
