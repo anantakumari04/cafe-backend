@@ -23,12 +23,13 @@ Manage Products – Add, Delete
 
 Manage Orders – Mark as Completed or Rejected
 
-🏗 Tech Stack
-Category	Technology
-Frontend	React.js, React Router, Redux / Context API, CSS / Tailwind
-Backend	Node.js, Express.js
-Database	MongoDB (Mongoose)
-Authentication	JWT (JSON Web Token), bcrypt.js
+🏗 Tech                  Stack
+Category	             Technology
+Frontend	             React.js, React Router, Redux / Context API, CSS / Tailwind
+Backend                  Node.js, Express.js
+Database	             MongoDB (Mongoose)
+Authentication	         JWT (JSON Web Token), bcrypt.js
+
 API Testing	Postman
 Deployment	Vercel / Render / Heroku (Frontend), MongoDB Atlas (Database)
 
@@ -57,6 +58,7 @@ MERN-Cafe-Store/
 │
 ├── README.md
 └── package.json
+
 ⚙️ Installation & Setup
 1️⃣ Clone the repository
 bash
@@ -64,6 +66,7 @@ Copy
 Edit
 git clone https://github.com/your-username/MERN-Cafe-Store.git
 cd MERN-Cafe-Store
+
 2️⃣ Install dependencies
 bash
 Copy
@@ -119,11 +122,14 @@ mermaid
 Copy
 Edit
 flowchart LR
+
+
     A[User Browser] -->|HTTP Requests| B[React Frontend]
     B -->|API Calls| C[Express.js Backend]
     C -->|Queries| D[MongoDB Database]
     C -->|Auth| E[JWT Authentication]
     F[Admin Panel] -->|Manage Data| C
+    
 📸 Screenshots
 ![Home Page Screenshot](public/home.png)
 
