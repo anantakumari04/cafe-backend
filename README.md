@@ -125,7 +125,8 @@ flowchart LR
     C -->|Auth| E[JWT Authentication]
     F[Admin Panel] -->|Manage Data| C
 📸 Screenshots
-(Add images of Home Page, Cart, Admin Panel, etc.)
+![Home Page](relative/path/to/home.png)
+
 
 🚀 Deployment
 Frontend: Your Deployed Link
