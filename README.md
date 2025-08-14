@@ -1,130 +1,193 @@
-# MERN Café Store
+# ☕ MERN Café Store
 
-![MERN Café Store](./public/home.png)
+<div align="center">
+  <img src="./public/home.png" alt="MERN Café Store Banner" width="800"/>
+</div>
 
-## Description
-
-MERN Café Store is a full-stack e-commerce web application designed specifically for a café business. It allows customers to browse products, add items to their cart, and place orders after logging in. The application features role-based authentication with two main user types: Customers and Admins.
-
-Admins have a dedicated dashboard to manage users, products, and orders, including adding or deleting users/products and updating order statuses (complete/reject). This system ensures smooth operations for café management and a seamless shopping experience for customers.
-
----
-
-## Features
-
-### User Features
-- User registration and login authentication.
-- Browse café products with detailed information.
-- Add products to the shopping cart.
-- Place orders (login required).
-- View order history and status updates.
-
-### Admin Features
-- Secure admin login.
-- Dashboard with an admin navigation bar.
-- Manage users: Add, delete users.
-- Manage products: Add, delete products.
-- Manage orders: View all orders and update order status (Complete / Reject).
-- Admin can monitor all user activities and order progress.
+<p align="center">
+  <a href="https://your-deployed-cafe-store-link">
+    <img src="https://img.shields.io/badge/Live-Demo-brown?style=for-the-badge" alt="Demo"/>
+  </a>
+  <a href="LICENSE">
+    <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License"/>
+  </a>
+  <a href="https://github.com/yourusername/mern-cafe-store/stargazers">
+    <img src="https://img.shields.io/github/stars/yourusername/mern-cafe-store?style=for-the-badge" alt="Stars"/>
+  </a>
+</p>
 
 ---
 
-## Technology Stack
+## 🎯 Project Overview
 
-| Frontend       | Backend         | Database         | Authentication       |
-|----------------|-----------------|------------------|----------------------|
-| React.js       | Node.js + Express.js | MongoDB          | JWT (JSON Web Token) |
+<div style="background-color:#fff8f0; padding:15px; border-radius:10px;">
+MERN Café Store is a <b>full-stack e-commerce web application</b> tailored for a café business.  
+It enables customers to:
+<ul>
+  <li>Browse and explore café products</li>
+  <li>Add items to their cart</li>
+  <li>Place orders after login</li>
+</ul>
+It also features a <b>role-based authentication system</b> for <b>Customers</b> and <b>Admins</b>, ensuring smooth business operations and delightful shopping experiences.
+</div>
 
 ---
 
-## Project Structure
+## ✨ Key Features
 
+<table>
+<tr>
+<th>Feature</th>
+<th>Description</th>
+<th>Icon</th>
+</tr>
+<tr>
+<td>Customer Registration & Login</td>
+<td>Secure authentication for users</td>
+<td>👤</td>
+</tr>
+<tr>
+<td>Product Browsing</td>
+<td>View café menu items with details</td>
+<td>📋</td>
+</tr>
+<tr>
+<td>Shopping Cart</td>
+<td>Add, view, and remove items before ordering</td>
+<td>🛒</td>
+</tr>
+<tr>
+<td>Order Placement</td>
+<td>Place orders after logging in</td>
+<td>📝</td>
+</tr>
+<tr>
+<td>Order History & Status</td>
+<td>Track previous and current orders</td>
+<td>📦</td>
+</tr>
+<tr>
+<td>Admin Dashboard</td>
+<td>Manage users, products, and orders</td>
+<td>🛠️</td>
+</tr>
+</table>
+
+---
+
+## 🌐 Live Demo
+
+<div align="center">
+  <a href="https://your-deployed-cafe-store-link">Click here to view the Live Demo 🚀</a>
+</div>
+
+---
+
+## 🛠️ Tech Stack
+
+<div style="display:flex; flex-wrap:wrap; gap:10px;">
+  <img src="https://img.shields.io/badge/React.js-61DAFB?style=for-the-badge&logo=react&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white"/>
+  <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white"/>
+  <img src="https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white"/>
+</div>
+
+---
+
+## 📂 Project Structure
+
+```plaintext
 mern-cafe-store/
-│
-├── backend/ # Express server, routes, controllers
-├── frontend/ # React app
-├── public/ # Static assets like images (home.png)
-├── README.md
-└── package.json
+├─ backend/
+│   ├─ routes/        # API routes
+│   ├─ controllers/   # Business logic
+│   ├─ models/        # Mongoose schemas
+│   └─ server.js
+├─ frontend/
+│   ├─ src/
+│   │   ├─ components/ # UI Components
+│   │   ├─ pages/      # Views
+│   │   └─ App.js
+├─ public/            # Static assets
+├─ README.md
+└─ package.json
 
+⚙️ Installation & Setup
+1️⃣ Clone Repository
+git clone https://github.com/yourusername/mern-cafe-store.git
+cd mern-cafe-store
 
-
----
-
-## Installation & Setup Instructions
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/yourusername/mern-cafe-store.git
-   cd mern-cafe-store
-   Setup Backend
-
-2. Setup Backend
+2️⃣ Backend Setup
 cd backend
 npm install
-# create a .env file with your MongoDB URI and JWT_SECRET
-npm start
 
-3. Setup Frontend
-   cd ../frontend
-npm install
-npm start
 
-Environment Variables
-Create a .env file in the backend folder with:
-
+Create a .env file in the backend folder:
 
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret_key
 PORT=5000
 
 
-Usage
-Users can browse products without login.
+Run the server:
 
-To place an order, users must register or login.
+npm start
 
-Admins login via the Admin section in the navbar.
+3️⃣ Frontend Setup
+cd ../frontend
+npm install
+npm start
 
-Admin panel allows user and product management and order status updates.
+🔄 System Workflow
+<div align="center"> <img src="./public/system-diagram.png" alt="System Diagram" width="800"/> </div>
+flowchart TD
+    A[Customer Browses Products] --> B[Add to Cart]
+    B --> C[Login/Register]
+    C --> D[Place Order]
+    D --> E[Order Stored in MongoDB]
+    E --> F[Admin Reviews & Updates Status]
+    F --> G[Customer Views Status in Dashboard]
 
-Order statuses can be updated to "Complete" or "Rejected" by the admin.
+📌 API Endpoints
+Method	Endpoint	Description
+POST	/api/users/register	Register a new user
+POST	/api/users/login	User login (returns JWT)
+GET	/api/products	Get all products
+POST	/api/products	Admin: Add new product
+DELETE	/api/products/:id	Admin: Delete product
+POST	/api/orders	Place new order
+GET	/api/orders	Admin: View all orders
+PUT	/api/orders/:id	Admin: Update order status
+GET	/api/users	Admin: View all users
+DELETE	/api/users/:id	Admin: Delete user
+🤝 Contribution
 
-API Endpoints (Summary)
-Route	Method	Description
-/api/users/register	POST	Register a new user
-/api/users/login	POST	Login user and return JWT token
-/api/products	GET	Get all products
-/api/products	POST	Admin: Add new product
-/api/products/:id	DELETE	Admin: Delete a product
-/api/orders	POST	Place new order
-/api/orders	GET	Admin: Get all orders
-/api/orders/:id	PUT	Admin: Update order status
-/api/users	GET	Admin: Get all users
-/api/users/:id	DELETE	Admin: Delete user
+Fork the repository
 
-System Diagram
+Create a new branch:
 
-
-
-+----------------+       +----------------+       +------------------+
-|                |       |                |       |                  |
-|   React Front  | <---> |  Express API   | <---> |    MongoDB       |
-|   (Frontend)   |       |  (Backend)     |       |   (Database)     |
-|                |       |                |       |                  |
-+----------------+       +----------------+       +------------------+
-
-User Flow:
-- User registers/logs in --> Token stored locally --> Authenticated requests to API
-- Admin logs in --> Access admin dashboard --> Manage users/products/orders
-
-
-User Flow:
-- User registers/logs in --> Token stored locally --> Authenticated requests to API
-- Admin logs in --> Access admin dashboard --> Manage users/products/orders
+git checkout -b feature/your-feature
 
 
+Commit changes:
 
-Contribution
-Feel free to fork this project and submit pull requests. For major changes, please open an issue first to discuss what you would like to change.
+git commit -m "Add your message"
 
+
+Push to your branch:
+
+git push origin feature/your-feature
+
+
+Open a Pull Request 🎉
+
+🙏 Acknowledgements
+
+MERN Stack community
+
+JWT Authentication docs
+
+MongoDB Atlas
+
+Made with ❤️ by Ananta Kumari (Nova)
