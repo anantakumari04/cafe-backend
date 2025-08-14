@@ -4,23 +4,13 @@
   <img src="./public/home.png" alt="MERN Café Store Banner" width="800"/>
 </div>
 
-<p align="center">
-  <a href="https://your-deployed-cafe-store-link">
-    <img src="https://img.shields.io/badge/Live-Demo-brown?style=for-the-badge" alt="Demo"/>
-  </a>
-  <a href="LICENSE">
-    <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License"/>
-  </a>
-  <a href="https://github.com/yourusername/mern-cafe-store/stargazers">
-    <img src="https://img.shields.io/github/stars/yourusername/mern-cafe-store?style=for-the-badge" alt="Stars"/>
-  </a>
-</p>
+
 
 ---
 
 ## 🎯 Project Overview
 
-<div style="background-color:#fff8f0; padding:15px; border-radius:10px;">
+<div style="background-color:#fff3e6; padding:15px; border-radius:10px;">
 MERN Café Store is a <b>full-stack e-commerce web application</b> tailored for a café business.  
 It enables customers to:
 <ul>
@@ -78,7 +68,7 @@ It also features a <b>role-based authentication system</b> for <b>Customers</b> 
 ## 🌐 Live Demo
 
 <div align="center">
-  <a href="https://your-deployed-cafe-store-link">Click here to view the Live Demo 🚀</a>
+  <a href="https://cafe-frontend-sooty.vercel.app/">Click here to view the Live Demo 🚀</a>
 </div>
 
 ---
@@ -112,6 +102,7 @@ mern-cafe-store/
 ├─ public/            # Static assets
 ├─ README.md
 └─ package.json
+
 
 ⚙️ Installation & Setup
 1️⃣ Clone Repository
