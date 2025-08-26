@@ -1,29 +1,34 @@
+// geminiChatRoute.js
 import express from "express";
-import fetch from "node-fetch";
+import { GoogleGenerativeAI } from "@google/generative-ai";
+
 const router = express.Router();
 
+// Initialize Gemini
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+
+// ✅ Health-check route (GET)
+router.get("/", (req, res) => {
+  res.json({ status: "ok", message: "Gemini chat API is running 🚀" });
+});
+
+// ✅ Chat route (POST)
 router.post("/", async (req, res) => {
-  const userMessage = req.body.message;
-  const apiKey = process.env.GEMINI_API_KEY; // Set this up in your .env file
-
-  const geminiEndpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${apiKey}`;
-  const payload = {
-    contents: [{ parts: [{ text: userMessage }] }]
-  };
-
   try {
-    const geminiResp = await fetch(geminiEndpoint, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload)
-    });
-    const result = await geminiResp.json();
-    const reply =
-      result?.candidates?.[0]?.content?.parts?.[0]?.text ||
-      "Sorry, I couldn't understand.";
+    const { message } = req.body;
+
+    if (!message) {
+      return res.status(400).json({ error: "Message is required" });
+    }
+
+    const result = await model.generateContent(message);
+    const reply = result.response.text();
+
     res.json({ reply });
-  } catch (err) {
-    res.status(500).json({ reply: "Sorry, something went wrong!" });
+  } catch (error) {
+    console.error("Gemini API Error:", error);
+    res.status(500).json({ error: "Something went wrong with Gemini API" });
   }
 });
 
