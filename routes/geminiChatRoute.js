@@ -2,7 +2,7 @@ import express from "express";
 import fetch from "node-fetch";
 const router = express.Router();
 
-router.post("/gemini-chat", async (req, res) => {
+router.post("/", async (req, res) => {
   const userMessage = req.body.message;
   const apiKey = process.env.GEMINI_API_KEY; // Set this up in your .env file
 
