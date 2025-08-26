@@ -5,6 +5,7 @@ import productRouter from "./routes/productRoute.js"
 import orderRouter from "./routes/orderRoute.js"
 import dotenv from 'dotenv'
 import cors from "cors" //to connect frontend and backend
+import chatRoutes from "./routes/chatRoutes.js";
 const app = express();
 app.use(express.json());
 
@@ -30,3 +31,4 @@ mongoose.connect(`mongodb+srv://${dbuser}:${dbpass}@cluster0.jwy61tr.mongodb.net
 app.use("/api/users", userRouter);
 app.use("/api/products",productRouter);
 app.use("/api/orders", orderRouter);
+app.use("/api/chat", chatRoutes);
