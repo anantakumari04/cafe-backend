@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 import userRouter from "./routes/userRoute.js";
 import productRouter from "./routes/productRoute.js"
 import orderRouter from "./routes/orderRoute.js"
-import geminiChatRoute from "./routes/geminiChatRoute.js"
+import geminiChatRouter from "./routes/geminiChatRoute.js"
 import dotenv from 'dotenv'
 import cors from "cors" //to connect frontend and backend
 const app = express();
