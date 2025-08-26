@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import userRouter from "./routes/userRoute.js";
 import productRouter from "./routes/productRoute.js"
 import orderRouter from "./routes/orderRoute.js"
+import geminiChatRoute from "./routes/geminiChatRoute.js"
 import dotenv from 'dotenv'
 import cors from "cors" //to connect frontend and backend
 const app = express();
@@ -30,3 +31,4 @@ mongoose.connect(`mongodb+srv://${dbuser}:${dbpass}@cluster0.jwy61tr.mongodb.net
 app.use("/api/users", userRouter);
 app.use("/api/products",productRouter);
 app.use("/api/orders", orderRouter);
+app.use("/api", geminiChatRouter);
